@@ -12,8 +12,14 @@ public class Paths {
 
 	public static final String HOME = System.getProperty("user.dir");
 
-	public static final String DEFAULT_DOWNLOAD_DIR = HOME + "/";
+	public static final String DEFAULT_DOWNLOAD_DIR = HOME + "/x-output";
 
 	public static final String JSON_CONFIG_FILE = HOME + "/config.json";
+
+	public static final String EXTENT_REPORT_FILE = HOME + "/x-output/reports/index.html";
+
+	public static final String SCREENSHOTS_DIR = HOME + "/x-output/reports/screenshots";
+
+	public static final String SCREENSHOTS_RELATIVE_DIR = "/screenshots";
 
 }

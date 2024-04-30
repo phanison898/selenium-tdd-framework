@@ -27,5 +27,4 @@ public class HomePageTest extends BaseTest {
 
 		Assert.assertTrue(title.equals(EXPECTED_TITLE), "Title not matched");
 	}
-
 }
