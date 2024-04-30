@@ -25,3 +25,5 @@ nbdist/
 
 # test-results
 test-output/
+
+/x-output
