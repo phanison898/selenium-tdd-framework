@@ -1,0 +1,29 @@
+{
+	"test-application": {
+		"web-url": "https://www.saucedemo.com/"
+	},
+	"automation-provision": {
+		"grid-url": "http://3.80.204.113:4444/wd/hub"
+	},
+	"browser": {
+		"screenshots": true,
+		"highlight": false,
+		"headless": true,
+		"timeouts": {
+			"page-load-wait-time": 60,
+			"implicit-wait-time": 5,
+			"explicit-wait-time": 20,
+			"script-load-wait-time": 60
+		}
+	},
+	"report": {
+		"name": "Automation test report",
+		"title": "Extent report",
+		"theme": "dark"
+	},
+	"author": {
+		"name": "Phani Kumar",
+		"github-username": "Phanison898",
+		"email": "phanison898@gmail.com"
+	}
+}

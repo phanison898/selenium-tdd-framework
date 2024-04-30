@@ -1,0 +1,27 @@
+# Maven specific
+target/
+!.mvn/wrapper/maven-wrapper.jar
+
+# IDEs
+.idea/
+*.iml
+*.ipr
+*.iws
+.idea_modules/
+.vscode/
+
+# Eclipse specific
+.classpath
+.project
+.settings/
+
+# NetBeans specific
+nbproject/
+build/
+nbbuild/
+dist/
+nbdist/
+.nb-gradle/
+
+# test-results
+test-output/
