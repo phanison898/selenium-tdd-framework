@@ -18,8 +18,8 @@ public class Paths {
 
 	public static final String EXTENT_REPORT_FILE = HOME + "/x-output/reports/index.html";
 
-	public static final String SCREENSHOTS_DIR = HOME + "/x-output/reports/screenshots";
+	public static final String REPORT_DIR = HOME + "/x-output/reports";
 
-	public static final String SCREENSHOTS_RELATIVE_DIR = "/screenshots";
+	public static final String SCREENSHOTS_REL_DIR = "screenshots";
 
 }

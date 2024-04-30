@@ -11,7 +11,7 @@
 	<test thread-count="5" name="Smoke Test">
 		<parameter name="browser" value="chrome" />
 		<classes>
-			<class name="com.smoke.tests.HomePageTest" />
+			<class name="com.smoke.tests.LoginPageTest" />
 		</classes>
 	</test>
 </suite>

@@ -15,6 +15,16 @@ public class Config {
 
 	private static JsonObject jo = null;
 
+	private static String browserName = null;
+
+	public static String getBrowserName() {
+		return browserName;
+	}
+
+	public static void setBrowserName(String browserName) {
+		Config.browserName = browserName;
+	}
+
 	public static String getGridURL() {
 		return getJsonObject().get("automation-provision").getAsJsonObject().get("grid-url").getAsString();
 	}

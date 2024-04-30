@@ -36,6 +36,8 @@ public class BaseTest {
 	@BeforeMethod
 	@Parameters({ "browser" })
 	public void setup(@Optional("chrome") String browser) {
+		
+		Config.setBrowserName(browser);
 
 		Driver driver = null;
 

@@ -4,7 +4,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import com.base.BaseTest;
-import com.config.Config;
+import com.pages.LoginPage;
 
 /**
  * 
@@ -14,17 +14,23 @@ import com.config.Config;
  * 
  **/
 
-public class HomePageTest extends BaseTest {
+public class LoginPageTest extends BaseTest {
+
+	LoginPage loginPage;
 
 	@Test
 	public void verifyLandingPageTitle() {
 
 		String EXPECTED_TITLE = "Swag Labs";
 
-		getDriver().get(Config.getTestApplicationURL());
+		loginPage = new LoginPage(getDriver());
+		loginPage.openBrowserAndEnterURL();
 
-		String title = getDriver().getTitle();
-
+		String title = loginPage.getPageTitle();
 		Assert.assertTrue(title.equals(EXPECTED_TITLE), "Title not matched");
+		loginPage.logger.pass("Title is displayed as expected", true);
+
+		loginPage.enterCredentials("standard_user", "secret_sauce");
+
 	}
 }
