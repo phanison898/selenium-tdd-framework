@@ -33,4 +33,5 @@ public class LoginPageTest extends BaseTest {
 		loginPage.enterCredentials("standard_user", "secret_sauce");
 
 	}
+
 }

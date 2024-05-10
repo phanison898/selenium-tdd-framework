@@ -26,10 +26,13 @@ public class WebActionsUtil {
 
 	public LoggerUtil logger = null;
 
+	public JSUtil jsUtil = null;
+
 	public WebActionsUtil(WebDriver driver) {
 
 		this.driver = driver;
 		logger = new LoggerUtil(driver);
+		jsUtil = new JSUtil(driver);
 	}
 
 	private WebElement wait(By locator) {
@@ -72,7 +75,8 @@ public class WebActionsUtil {
 	}
 
 	public void click(By locator, String log) {
-		getElement(locator).click();
+//		getElement(locator).click();
+		jsUtil.click(getElement(locator));
 		logger.info(log);
 	}
 
@@ -99,15 +103,17 @@ public class WebActionsUtil {
 
 	public void enter(By locator, String text, String log) {
 		WebElement element = getElement(locator);
-		element.clear();
-		element.sendKeys(text);
+//		element.clear();
+//		element.sendKeys(text);
+		jsUtil.enter(element, text);
 		logger.info(log);
 	}
 
 	public void enter(By locator, String text, String log, boolean needScreenshot) {
 		WebElement element = getElement(locator);
-		element.clear();
-		element.sendKeys(text);
+//		element.clear();
+//		element.sendKeys(text);
+		jsUtil.enter(element, text);
 		logger.info(log, needScreenshot);
 	}
 
@@ -123,6 +129,14 @@ public class WebActionsUtil {
 		element.clear();
 		element.sendKeys(text);
 		logger.matchLogType(type, log, needScreenshot);
+	}
+
+	public String getText(By locator) {
+		return getElement(locator).getText();
+	}
+
+	public String getAttribute(By locator, String attribute) {
+		return getElement(locator).getAttribute(attribute);
 	}
 
 }
