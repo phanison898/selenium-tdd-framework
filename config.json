@@ -8,7 +8,7 @@
 	"browser": {
 		"screenshots": true,
 		"highlight": false,
-		"headless": false,
+		"headless": true,
 		"timeouts": {
 			"page-load-wait-time": 60,
 			"implicit-wait-time": 5,

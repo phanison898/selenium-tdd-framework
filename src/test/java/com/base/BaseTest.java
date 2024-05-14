@@ -24,19 +24,18 @@ public class BaseTest {
 
 	public static ThreadLocal<WebDriver> localDriver = new ThreadLocal<WebDriver>();
 
-	private String STAGE;
-
 	@BeforeSuite
 	@Parameters({ "stage" })
 	public void oneTimeSetup(@Optional("local") String stage) {
 
-		STAGE = stage;
+		stage = System.getProperty("stage") != null ? System.getProperty("stage") : stage;
+		Config.setStage(stage);
 	}
 
 	@BeforeMethod
 	@Parameters({ "browser" })
 	public void setup(@Optional("chrome") String browser) {
-		
+
 		Config.setBrowserName(browser);
 
 		Driver driver = null;
@@ -56,7 +55,7 @@ public class BaseTest {
 			break;
 		}
 
-		if (STAGE.equals("remote")) {
+		if (Config.getStage().equals("remote")) {
 
 			URL url = null;
 

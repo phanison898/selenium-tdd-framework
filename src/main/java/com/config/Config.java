@@ -17,6 +17,16 @@ public class Config {
 
 	private static String browserName = null;
 
+	private static String stage = null;
+
+	public static void setStage(String stage) {
+		Config.stage = stage;
+	}
+
+	public static String getStage() {
+		return Config.stage;
+	}
+
 	public static String getBrowserName() {
 		return browserName;
 	}
