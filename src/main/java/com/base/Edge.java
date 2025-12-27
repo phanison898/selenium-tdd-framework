@@ -55,14 +55,14 @@ public class Edge implements Driver {
 		options.addArguments("--disable-popup-blocking");
 		options.addArguments("--disable-save-password-bubble");
 		options.addArguments("--ignore-certificate-errors");
-		options.addArguments("--disable-gpu");
-		options.addArguments("--test-type");
-		options.addArguments("--window-size=1920,1080");
 		options.addArguments("--start-maximized");
 		options.setExperimentalOption("prefs", prefs);
 
 		if (Config.isHeadless()) {
 			options.addArguments("--headless");
+			options.addArguments("--disable-gpu");
+			options.addArguments("--test-type");
+			options.addArguments("--window-size=1920,1080");
 		}
 
 		return options;
